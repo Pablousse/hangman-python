@@ -2,7 +2,5 @@ from utils.game import Hangman
 
 hangman = Hangman()
 
-print(hangman.word_to_find)
-print("")
-
+# Running the game
 hangman.start_game()
