@@ -1,7 +1,6 @@
 import random
 import re
 from typing import List
-import django
 
 from utils.string_utils import pluralize
 
@@ -57,19 +56,19 @@ class Hangman:
         self.initialize_game()
 
     @property
-    def error_count(self) -> int:
-        return len(self.wrongly_guessed_letters)
+    def __error_count(self) -> int:
+        return len(self.__wrongly_guessed_letters)
 
     def initialize_game(self):
-        self.word_to_find: List[str] = list(
+        self.__word_to_find: List[str] = list(
             random.choice(self.__possible_words)
         )
-        self.lives: int = 5
-        self.correctly_guessed_letters: List[str] = list(
-            len(self.word_to_find) * "_"
+        self.__lives: int = 5
+        self.__correctly_guessed_letters: List[str] = list(
+            len(self.__word_to_find) * "_"
         )
-        self.turn_count: int = 1
-        self.wrongly_guessed_letters: List[str] = []
+        self.__turn_count: int = 1
+        self.__wrongly_guessed_letters: List[str] = []
 
     def play(self) -> None:
         """This function is in charge of asking the user's input and process it
@@ -80,32 +79,32 @@ class Hangman:
             print("Please enter a valid letter")
             self.play()
         elif (
-            chosen_letter in self.wrongly_guessed_letters
-            or chosen_letter in self.correctly_guessed_letters
+            chosen_letter in self.__wrongly_guessed_letters
+            or chosen_letter in self.__correctly_guessed_letters
         ):
             print("You already tried this letter")
             self.play()
         else:
-            if chosen_letter in self.word_to_find:
+            if chosen_letter in self.__word_to_find:
                 # adding an empty line for more readability
                 print("")
                 print("Good guess")
                 gen = (
                     i
-                    for i in range(len(self.word_to_find))
-                    if self.word_to_find[i] == chosen_letter
+                    for i in range(len(self.__word_to_find))
+                    if self.__word_to_find[i] == chosen_letter
                 )
                 for i in gen:
-                    self.correctly_guessed_letters[i] = chosen_letter
+                    self.__correctly_guessed_letters[i] = chosen_letter
 
             else:
                 # adding an empty line for more readability
                 print("")
                 print("Wrong guess")
-                self.wrongly_guessed_letters.append(chosen_letter)
-                self.lives -= 1
+                self.__wrongly_guessed_letters.append(chosen_letter)
+                self.__lives -= 1
 
-            self.turn_count += 1
+            self.__turn_count += 1
 
     def game_over(self) -> None:
         """Function in charge of printing when the game is over"""
@@ -114,9 +113,9 @@ class Hangman:
     def well_played(self) -> None:
         """function called when someone beat the game"""
         print(
-            f"You found the word: {''.join(self.word_to_find)} in "
-            f"{self.turn_count-1} turns with {self.error_count} error"
-            f"{pluralize(self.error_count)}!"
+            f"You found the word: {''.join(self.__word_to_find)} in "
+            f"{self.__turn_count-1} turns with {self.__error_count} error"
+            f"{pluralize(self.__error_count)}!"
         )
 
     def play_again(self) -> None:
@@ -132,24 +131,27 @@ class Hangman:
 
     def start_game(self) -> None:
         """Function in charge of the game workflow"""
-        print(self.correctly_guessed_letters)
-        while self.lives > 0:
-            print(f"turn {self.turn_count}")
+        print(self.__correctly_guessed_letters)
+        while self.__lives > 0:
+            print(f"turn {self.__turn_count}")
             # this draws the Hangman
-            print(HANGMAN_PICS[self.error_count])
+            print(HANGMAN_PICS[self.__error_count])
             self.play()
             # adding an empty line for more readability
             print("")
-            print(self.correctly_guessed_letters)
-            print(f"Wrong guesses: {self.wrongly_guessed_letters}")
-            print(f"{self.lives} live" f"{pluralize(self.lives)} left")
-            print(f"{self.error_count} error" f"{pluralize(self.error_count)}")
+            print(self.__correctly_guessed_letters)
+            print(f"Wrong guesses: {self.__wrongly_guessed_letters}")
+            print(f"{self.__lives} live" f"{pluralize(self.__lives)} left")
+            print(
+                f"{self.__error_count} error"
+                f"{pluralize(self.__error_count)}"
+            )
             print("")
-            if self.word_to_find == self.correctly_guessed_letters:
+            if self.__word_to_find == self.__correctly_guessed_letters:
                 break
 
-        if self.lives == 0:
-            print(HANGMAN_PICS[self.error_count])
+        if self.__lives == 0:
+            print(HANGMAN_PICS[self.__error_count])
             self.game_over()
         else:
             self.well_played()
