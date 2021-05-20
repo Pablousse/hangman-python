@@ -74,7 +74,10 @@ class Hangman:
             f"{pluralize(self.error_count)}!"
         )
 
-    def play_again(self):
+    def play_again(self) -> None:
+        """This is in charge of Asking the user if he wants to play again or
+        not and if yes to reinitialize the game
+        """
         user_answer = input("Play again y/n: ")
         if user_answer.lower() == "y":
             self.initialize_game()
