@@ -86,6 +86,7 @@ class Hangman:
             self.play()
         else:
             if chosen_letter in self.word_to_find:
+                # adding an empty line for more readability
                 print("")
                 print("Good guess")
                 gen = (
@@ -97,6 +98,7 @@ class Hangman:
                     self.correctly_guessed_letters[i] = chosen_letter
 
             else:
+                # adding an empty line for more readability
                 print("")
                 print("Wrong guess")
                 self.wrongly_guessed_letters.append(chosen_letter)
@@ -132,8 +134,10 @@ class Hangman:
         print(self.correctly_guessed_letters)
         while self.lives > 0:
             print(f"turn {self.turn_count}")
+            # this draws the Hangman
             print(HANGMAN_PICS[self.error_count])
             self.play()
+            # adding an empty line for more readability
             print("")
             print(self.correctly_guessed_letters)
             print(f"Wrong guesses: {self.wrongly_guessed_letters}")
