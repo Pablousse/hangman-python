@@ -1,4 +1,5 @@
 import random
+from utils.string_utils import pluralize
 
 
 class Hangman:
@@ -40,9 +41,9 @@ class Hangman:
         print("game over...")
 
     def well_played(self):
-        print(f"You found the word: {''.join(self.word_to_find)} in {self.turn_count}"
-              f" turns with {self.error_count} error"
-              f"{'s' if self.error_count > 1 else ''}!")
+        print(f"You found the word: {''.join(self.word_to_find)} in "
+              f"{self.turn_count} turns with {self.error_count} error"
+              f"{pluralize(self.error_count)}!")
 
     def start_game(self):
         print(self.correctly_guessed_letters)
@@ -53,9 +54,9 @@ class Hangman:
             print(self.correctly_guessed_letters)
             print(f"Wrong guesses: {self.wrongly_guessed_letters}")
             print(f"{self.lives} live"
-                  f"{'s' if self.lives > 1 else ''} left")
+                  f"{pluralize(self.lives)} left")
             print(f"{self.error_count} error"
-                  f"{'s' if self.error_count > 1 else ''}")
+                  f"{pluralize(self.error_count)}")
             print("")
             if self.word_to_find == self.correctly_guessed_letters:
                 break
