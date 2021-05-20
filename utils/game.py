@@ -1,6 +1,7 @@
 import random
 import re
 from typing import List
+import django
 
 from utils.string_utils import pluralize
 
