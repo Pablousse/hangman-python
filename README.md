@@ -2,6 +2,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![MIT License][license-shield]][license-url]
+![GitHub](https://img.shields.io/github/license/Pablousse/hangman-python?style=flat-square)
 
 <!-- PROJECT TITLE -->
 <br />
