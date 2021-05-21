@@ -1,7 +1,9 @@
-[![Contributors][contributors-shield]][contributors-url]
+![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT TITLE -->
 <br />
@@ -12,6 +14,7 @@
     An implementation of the famous game "Hangman"
   </p>
 </p>
+<br />
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -24,18 +27,12 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
+      <a href="#installation">Installation</a>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -54,7 +51,7 @@ During the course of my training with becode I created this Hangman game project
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/Pablousse/hangman-python.git
    ```
 
 <!-- USAGE EXAMPLES -->
@@ -62,7 +59,7 @@ During the course of my training with becode I created this Hangman game project
 
 Go to the main folder of the repo and run to start the game
    ```sh
-   python3 main.py 
+   $ python3 main.py 
    ```
 
 <!-- CONTRIBUTING -->
@@ -86,4 +83,17 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Arnaud Durieux - durieux.arnaud@homail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/Pablousse/hangman-python](https://github.com/Pablousse/hangman-python)
+
+[contributors-shield]: https://img.shields.io/github/contributors/Pablousse/hangman-python.svg?style=for-the-badge
+[contributors-url]: https://github.com/Pablousse/hangman-python/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Pablousse/hangman-python.svg?style=for-the-badge
+[forks-url]: https://github.com/Pablousse/hangman-python/network/members
+[stars-shield]: https://img.shields.io/github/stars/Pablousse/hangman-python.svg?style=for-the-badge
+[stars-url]: https://github.com/Pablousse/hangman-python/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Pablousse/hangman-python.svg?style=for-the-badge
+[issues-url]: https://github.com/Pablousse/hangman-python/issues
+[license-shield]: https://img.shields.io/github/license/Pablousse/hangman-python.svg?style=for-the-badge
+[license-url]: https://github.com/Pablousse/hangman-python/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/Pablousse
