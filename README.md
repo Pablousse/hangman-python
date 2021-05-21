@@ -90,4 +90,4 @@ Project Link: [https://github.com/Pablousse/hangman-python](https://github.com/P
 [stars-shield]: https://img.shields.io/github/stars/Pablousse/hangman-python.svg?style=for-the-badge
 [stars-url]: https://github.com/Pablousse/hangman-python/stargazers
 [license-shield]: https://img.shields.io/github/license/Pablousse/hangman-python.svg?style=for-the-badge
-[license-url]: https://github.com/Pablousse/hangman-python/LICENSE.txt
+[license-url]: https://github.com/Pablousse/hangman-python/blob/main/LICENSE.txt
