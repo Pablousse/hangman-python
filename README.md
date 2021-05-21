@@ -1,9 +1,7 @@
 ![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT TITLE -->
 <br />
@@ -91,9 +89,5 @@ Project Link: [https://github.com/Pablousse/hangman-python](https://github.com/P
 [forks-url]: https://github.com/Pablousse/hangman-python/network/members
 [stars-shield]: https://img.shields.io/github/stars/Pablousse/hangman-python.svg?style=for-the-badge
 [stars-url]: https://github.com/Pablousse/hangman-python/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Pablousse/hangman-python.svg?style=for-the-badge
-[issues-url]: https://github.com/Pablousse/hangman-python/issues
 [license-shield]: https://img.shields.io/github/license/Pablousse/hangman-python.svg?style=for-the-badge
-[license-url]: https://github.com/Pablousse/hangman-python/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/Pablousse
+[license-url]: https://github.com/Pablousse/hangman-python/LICENSE.txt
